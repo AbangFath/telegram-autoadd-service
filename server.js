@@ -5,6 +5,7 @@ import { Api } from 'telegram/tl/index.js';
 
 const app = express();
 app.use(express.json());
+app.get('/', (req, res) => res.send('OK'));
 
 const apiId = Number(process.env.TELEGRAM_API_ID);
 const apiHash = process.env.TELEGRAM_API_HASH;
